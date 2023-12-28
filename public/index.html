@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnSoft</title>
+    <meta property="og:title" content="OnSoft" />
+    <meta
+      property="og:description"
+      content="Це - сторінка it-компанії, яка розробляє веб додатки на замовлення"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Overlay -->
+    <div id="myModal" class="modal">
+      <!-- Контент віконця -->
+      <div class="modal-content">
+        <span class="close"><i class="fa fa-window-close"></i></span>
+
+        <form id="regform" action="/submit" method="post">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+          /><br /><br />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          /><br /><br />
+
+          <label for="aboutyou">About you:</label>
+          <textarea id="aboutyou" placeholder="Some text..."></textarea
+          ><br /><br />
+
+          <label for="skill1">Your skills:</label><br />
+          <input type="checkbox" id="skill1" name="htmlcss" />HTML + CSS<br />
+          <input type="checkbox" id="skill2" name="js" />JavaScript<br />
+          <input type="checkbox" id="skill3" name="photoshopfigma" />Photoshop
+          or Figma<br />
+          <input type="checkbox" id="skill4" name="react" />React.js<br />
+          <input type="checkbox" id="skill5" name="node" />Node.js<br /><br />
+
+          <label>Your gender</label><br />
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            required
+          />Male<br />
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            required
+          />Female<br /><br />
+
+          <label for="oblast">Your region:</label><br />
+          <select id="oblast" name="oblast" required>
+            <option label="select oblast"></option>
+            <option value="Crimea">Crimea</option>
+            <option value="Sumy">Sumy</option>
+            <option value="Chernihiv">Chernihiv</option>
+            <option value="Lutsk">Lutsk</option>
+            <option value="Rivne">Rivne</option>
+            <option value="Zhytomyr">Zhytomyr</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+            <option value="Ternopil">Ternopil</option>
+            <option value="Khmelnytsky">Khmelnytsky</option>
+            <option value="Uzhorod">Uzhorod</option>
+            <option value="Chernivtsi">Chernivtsi</option>
+            <option value="Vinnytsa">Vinnytsa</option>
+            <option value="Cherkasy">Cherkasy</option>
+            <option value="Poltava">Poltava</option>
+            <option value="Kharkiv">Kharkiv</option>
+            <option value="Kropyvnytsky">Kropyvnytsky</option>
+            <option value="Mykolaiv">Mykolaiv</option>
+            <option value="Kherson">Kherson</option>
+            <option value="Odesa">Odesa</option>
+            <option value="Dnipro">Dnipro</option>
+            <option value="Zaporizhzha">Zaporizhzha</option>
+            <option value="Donetsk">Donetsk</option>
+            <option value="Luhansk">Luhansk</option></select
+          ><br /><br />
+
+          <label for="date">Date of birth:</label><br />
+          <input type="date" id="date" name="date" required /><br /><br />
+
+          <input type="submit" value="Send answer" />
+        </form>
+      </div>
+    </div>
+
+    <header>
+      <img class="logo" src="img/logo.png" alt="logotype" />
+      <nav class="visible">
+        <ul>
+          <li><a href="#whatwedo">What we do</a></li>
+          <li><a href="#ourexperience">Our experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#ourteam">Our team</a></li>
+          <li><a href="#contactus">Contact Us</a></li>
+          <li>
+            <button id="myBtn" type="button">
+              <i class="fa fa-address-card"></i>Register/Login
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="whatwedo">
+        <h2>What we do</h2>
+        <p>
+          Good day to everyone reading this page. WE are the IT company OnSoft,
+          which has been working in Ukraine for more than 5 years. We are
+          engaged in the development and further support of web applications, we
+          release them for various institutions. Our company employs employees
+          with experience in frontend and backend development, therefore, you
+          can not worry about the quality of the work done. We have contact data
+          so you can order a site from us.
+        </p>
+      </section>
+
+      <section id="ourexperience">
+        <h2>Our experience</h2>
+        <p>
+          We are working more than 5 years. Our developers know how to work with
+          different technologies and how to apply it effectively. Lower are the
+          list of our most-usable instruments and technologies:
+        </p>
+
+        <ul>
+          <li>HTML5 + CSS3</li>
+          <li>Photoshop</li>
+          <li>Bootstrap, SaSS</li>
+          <li>JavaScript and TypeScript</li>
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>Databases and Data Management systems</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          During our existence, we did many works. That was both small lendings
+          and full-scale sites. Here are the main projects we did:
+        </p>
+
+        <div class="wrapper">
+          <div class="project-tile">
+            <h3>University learning site</h3>
+            <div class="img">
+              <img src="img/project.jfif" alt="proj1" />
+            </div>
+            <p>A learning platform for university</p>
+          </div>
+
+          <div class="project-tile">
+            <h3>Internet shop</h3>
+            <div class="img">
+              <img src="img/project.jfif" alt="proj2" />
+            </div>
+            <p>Syte for buying via the Internet</p>
+          </div>
+
+          <div class="project-tile">
+            <h3>Online game</h3>
+            <div class="img">
+              <img src="img/project.jfif" alt="proj3" />
+            </div>
+            <p>Online game</p>
+          </div>
+
+          <div class="project-tile">
+            <h3>Technical documentation page</h3>
+            <div class="img">
+              <img src="img/project.jfif" alt="proj4" />
+            </div>
+            <p>Page about our site</p>
+          </div>
+
+          <div class="project-tile">
+            <h3>Social media</h3>
+            <div class="img">
+              <img src="img/project.jfif" alt="proj5" />
+            </div>
+            <p>Social media</p>
+          </div>
+
+          <div class="project-tile">
+            <h3>Project</h3>
+            <div class="img">
+              <img src="img/project.jfif" alt="proj6" />
+            </div>
+            <p>Project</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ourteam">
+        <h2>Our team</h2>
+        <p>
+          Our team has 80 person from founder to programmers and designers. The
+          key persons are here:
+        </p>
+
+        <div class="wrapper">
+          <div class="person-tile">
+            <h3>Name Surname</h3>
+            <div class="img">
+              <img src="img/person.jfif" alt="pers1" />
+            </div>
+            <p>Founder</p>
+          </div>
+
+          <div class="person-tile">
+            <h3>Name Surname</h3>
+            <div class="img">
+              <img src="img/person.jfif" alt="pers2" />
+            </div>
+            <p>Senior frontend developer</p>
+          </div>
+
+          <div class="person-tile">
+            <h3>Name Surname</h3>
+            <div class="img">
+              <img src="img/person.jfif" alt="pers3" />
+            </div>
+            <p>Main designer</p>
+          </div>
+
+          <div class="person-tile">
+            <h3>Name Surname</h3>
+            <div class="img">
+              <img src="img/person.jfif" alt="pers4" />
+            </div>
+            <p>Senior backend developer</p>
+          </div>
+
+          <div class="person-tile">
+            <h3>Name Surname</h3>
+            <div class="img">
+              <img src="img/person.jfif" alt="pers5" />
+            </div>
+            <p>HR-specialist</p>
+          </div>
+
+          <div class="person-tile">
+            <h3>Name Surname</h3>
+            <div class="img">
+              <img src="img/person.jfif" alt="pers6" />
+            </div>
+            <p>SMM-specialist</p>
+          </div>
+        </div>
+
+        <p class="other">Other people are also important for our company.</p>
+      </section>
+
+      <h2>Цікаві факти про веб-розробку</h2>
+      <section id="interest_facts">
+        <!-- <div class="fact fact1">
+          <h4>Факт 1</h4>
+          <p>
+            Розробка макета сайту повинна враховувати поведінку користувачів
+          </p>
+          <div class="likes-section">
+            <button>❤</button>
+            <p>Likes - 0</p>
+          </div>
+        </div>
+        <div class="fact fact2">
+          <h4>Факт 2</h4>
+          <p>Шаблони можуть обмежувати можливості розробки сайту</p>
+          <div class="likes-section">
+            <button>❤</button>
+            <p>Likes - 0</p>
+          </div>
+        </div>
+        <div class="fact fact3">
+          <h4>Факт 3</h4>
+          <p>Вихідний код сайту впливає на видачу в пошукових системах</p>
+          <div class="likes-section">
+            <button>❤</button>
+            <p>Likes - 0</p>
+          </div>
+        </div>
+        <div class="fact fact4">
+          <h4>Факт 4</h4>
+          <p>
+            Ціна розробки гарного сайту коливається від 300$ до 5000$ і вище
+          </p>
+          <div class="likes-section">
+            <button>❤</button>
+            <p>Likes - 0</p>
+          </div>
+        </div>
+        <div class="fact fact5">
+          <h4>Факт 5</h4>
+          <p>Є велика різниця між гнучким і мобільним веб-дизайном</p>
+          <div class="likes-section">
+            <button>❤</button>
+            <p>Likes - 0</p>
+          </div>
+        </div>
+        <div class="fact fact6">
+          <h4>Факт 6</h4>
+          <p>
+            Зображення та відео можуть мати і позитивний, і негативний вплив на
+            сайт
+          </p>
+          <div class="likes-section">
+            <button>❤</button>
+            <p>Likes - 0</p>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+    <footer id="contactus">
+      <h2>Contact Us</h2>
+
+      <div class="wrapper-foot">
+        <div class="col">
+          <h4>Our social media</h4>
+          <ul>
+            <li><a href="#">@aaa_aaa</a> - Instagram</li>
+            <li><a href="#">@bbb_bbb</a> - Facebook</li>
+            <li><a href="#">@ccc_ccc</a> - Telegram</li>
+            <li><a href="#">ddd_ddd@gmail.com</a> - Gmail</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Our phones</h4>
+          <ul>
+            <li>+380987654321 - Director</li>
+            <li>+380684286382 - Consultant</li>
+            <li>+380974322677 - HR-specialist</li>
+            <li>+380964562867 - Marketolog</li>
+          </ul>
+        </div>
+      </div>
+
+      <p><sub>® all rights reserved</sub></p>
+
+      <h4>Calculation form</h4>
+      <div class="calc_form">
+        <form action="/submit" method="post">
+          <p>3) A square of cylinder surface</p>
+
+          <label for="radius">Enter radius:</label>
+          <input type="text" id="radius" name="radius" required /><br />
+          <p id="radius_error" class="error"></p>
+
+          <label for="height">Enter height:</label>
+          <input type="text" id="height" name="height" required /><br />
+          <p id="height_error" class="error"></p>
+
+          <label for="result">Result:</label>
+          <input type="text" id="result" name="result" /><br />
+
+          <label for="addinfo">Show additional message:</label>
+          <input
+            type="checkbox"
+            id="addinfo"
+            onchange="toggleInfo()"
+          /><br /><br />
+
+          <button id="calc" type="button">Calculate!</button>
+          <button id="clear" type="button">Clean form!</button>
+        </form>
+
+        <div
+          id="additionalinfo"
+          style="display: none; width: 80%; margin-left: 10%; margin-top: -10px"
+        >
+          <p>
+            Потрібно ввести числові значення висоти та радіуса циліндра, і щоб
+            ці значення були > 0, і тоді буде все добре.
+          </p>
+        </div>
+      </div>
+
+      <div class="feedback">
+        <h2>Форма зворотнього зв'язку</h2>
+        <form action="/send-email" method="post" id="feedback_form">
+          <label for="name">Enter your name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
+  
+          <label for="email">Enter your email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+  
+          <label for="subject">Topic:</label><br />
+          <input type="text" id="subject" name="subject" required /><br />
+  
+          <label for="message">Message text</label><br />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Some text..."
+          ></textarea
+          ><br />
+  
+          <input
+            id="submitter"
+            type="submit"
+            name="submit"
+            value="Send feedback"
+          />
+        </form>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

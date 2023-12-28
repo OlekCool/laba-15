@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registration form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta property="og:title" content="OnSoft">
+        <meta property="og:description" content="Це - сторінка it-компанії, яка розробляє веб додатки на замовлення">
+        <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+        <link rel="manifest" href="ico/site.webmanifest">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <form action="/submit" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="aboutyou">About you:</label>
+            <textarea id="aboutyou" placeholder="Some text..."></textarea><br><br>
+
+            <label for="skill1">Your skills:</label><br>
+            <input type="checkbox" id="skill1" name="htmlcss">HTML + CSS<br>
+            <input type="checkbox" id="skill2" name="js">JavaScript<br>
+            <input type="checkbox" id="skill3" name="photoshopfigma">Photoshop or Figma<br>
+            <input type="checkbox" id="skill4" name="react">React.js<br>
+            <input type="checkbox" id="skill5" name="node">Node.js<br><br>
+
+            <label>Your gender</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>Male<br>
+            <input type="radio" id="female" name="gender" value="female" required>Female<br><br>
+
+            <label for="oblast">Your region:</label><br>
+            <select id="oblast" name="oblast" required>
+                <option label="select oblast"></option>
+                <option value="Crimea">Crimea</option>
+                <option value="Sumy">Sumy</option>
+                <option value="Chernihiv">Chernihiv</option>
+                <option value="Lutsk">Lutsk</option>
+                <option value="Rivne">Rivne</option>
+                <option value="Zhytomyr">Zhytomyr</option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+                <option value="Ternopil">Ternopil</option>
+                <option value="Khmelnytsky">Khmelnytsky</option>
+                <option value="Uzhorod">Uzhorod</option>
+                <option value="Chernivtsi">Chernivtsi</option>
+                <option value="Vinnytsa">Vinnytsa</option>
+                <option value="Cherkasy">Cherkasy</option>
+                <option value="Poltava">Poltava</option>
+                <option value="Kharkiv">Kharkiv</option>
+                <option value="Kropyvnytsky">Kropyvnytsky</option>
+                <option value="Mykolaiv">Mykolaiv</option>
+                <option value="Kherson">Kherson</option>
+                <option value="Odesa">Odesa</option>
+                <option value="Dnipro">Dnipro</option>
+                <option value="Zaporizhzha">Zaporizhzha</option>
+                <option value="Donetsk">Donetsk</option>
+                <option value="Luhansk">Luhansk</option>
+            </select><br><br>
+
+            <label for="date">Date of birth:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <input type="submit" value="Send answer">
+        </form>
+    </body>
+</html>

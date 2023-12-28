@@ -1,0 +1,379 @@
+/* GENERAL */
+body {
+  margin: 0;
+  background-color: rgb(225, 240, 253);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 1.2em;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  color: #121;
+  font-size: 2em;
+}
+
+ul {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+  font-family: "Quicksand", sans-serif;
+}
+
+section {
+  border-bottom: 1px solid #000000;
+  background-color: aliceblue;
+  padding: 50px 25px 100px 25px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+section h2 {
+  margin-bottom: 50px;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+footer {
+  background-color: rgb(0, 168, 168);
+  padding: 25px;
+  border-top: 1px solid black;
+}
+
+div.wrapper,
+footer div.wrapper-foot {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+/* LIGHTBOX */
+.modal {
+  display: none;
+  position: fixed;
+  width: 81vw;
+  margin: 18vh calc((100vw - 80vw) / 2 - 1.8vw);
+  margin-top: 19.3vh;
+  background-color: rgb(148, 235, 255);
+  border: 1px solid black;
+  padding: 10px;
+  z-index: 999;
+  overflow: scroll;
+  font-size: 15px;
+  text-align: center;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal .modal-content span {
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* HEADER */
+header {
+  background-color: #00fff2;
+  padding: 10px;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #000000;
+}
+
+header nav.visible {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header nav.visible ul {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav.visible ul li {
+  margin-right: 40px;
+  text-align: center;
+}
+
+header nav.visible ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header nav.visible ul li a:hover {
+  color: #9c8000;
+  text-decoration: underline;
+}
+
+/* WHAT WE DO */
+
+/* OUR EXPERIENCE */
+
+section#ourexperience ul {
+  margin-top: 50px;
+}
+
+/* PROJECTS */
+section#projects p {
+  text-align: center;
+}
+
+section#projects div.project-tile,
+section#ourteam div.person-tile {
+  border: 1px dashed #03000c;
+  padding: 10px;
+  border-radius: 16px;
+  margin: 10px;
+  min-width: 300px;
+  margin-top: 30px;
+}
+
+section#projects div.project-tile .img,
+section#ourteam div.person-tile .img {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+section#projects div.project-tile h3,
+section#ourteam div.person-tile h3 {
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+section#projects div.project-tile p,
+section#ourteam div.person-tile p {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* OUR TEAM */
+section#ourteam p {
+  text-align: center;
+}
+
+section#ourteam p.other {
+  margin-top: 50px;
+  margin-bottom: -30px;
+}
+
+/* INTEREST FACTS */
+#interest_facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fact {
+  box-sizing: border-box;
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border: 1px dashed #03000c;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.likes-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.likes-section button {
+  margin-right: 5px;
+}
+
+/* FOOTER */
+footer div.wrapper-foot div.col {
+  width: 40%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+footer div.wrapper-foot div.img {
+  opacity: 80%;
+}
+
+footer div.wrapper-foot div.img img {
+  width: 80px;
+  height: 80px;
+  margin-top: 80px;
+}
+
+footer div.wrapper-foot div.col ul {
+  list-style: none;
+}
+
+footer div.wrapper-foot div.col ul li {
+  text-align: left;
+  margin-left: 25%;
+}
+
+footer div.wrapper-foot div.col ul li a {
+  color: #110041c0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+footer div.wrapper-foot div.col ul li a:hover {
+  color: #be0000;
+}
+
+footer p {
+  text-align: center;
+  color: #333;
+  opacity: 65%;
+}
+
+/* MEDIA QUERIES FOR ADAPTIVITY */
+
+@media (max-width: 576px) {
+  header nav.visible ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav.visible ul li {
+    margin: 0;
+  }
+
+  header nav.visible ul li a {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 30px 10px 50px 10px;
+  }
+
+  section#projects div.project-tile,
+  section#ourteam div.person-tile {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  header nav.visible ul li a {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 40px 20px 60px 20px;
+  }
+
+  section#projects div.project-tile,
+  section#ourteam div.person-tile {
+    min-width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  section {
+    padding: 50px 30px 70px 30px;
+  }
+
+  section#projects div.project-tile,
+  section#ourteam div.person-tile {
+    min-width: calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding: 50px 30px 70px 30px;
+  }
+
+  section#projects div.project-tile,
+  section#ourteam div.person-tile {
+    min-width: calc(25% - 20px);
+  }
+}
+
+/* calculation form */
+footer#contactus h4 {
+  margin-top: 60px;
+  font-size: 1.4em;
+}
+
+div.calc_form {
+  background-color: rgb(206, 232, 255);
+  height: 600px;
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+div.calc_form form {
+  height: 450px;
+  width: 600px;
+  margin: 50px auto;
+  border: 1px solid black;
+  background-color: rgb(235, 245, 255);
+}
+
+div.calc_form form label {
+  margin-left: 40px;
+}
+
+div.calc_form form input {
+  margin-top: 20px;
+}
+
+div.calc_form form button {
+  margin-left: 50px;
+}
+
+.wrong_radius {
+  border: 1px solid red;
+}
+
+.wrong_height {
+  border: 1px solid red;
+}
+
+/* FEEDBACK FORM */
+.feedback {
+  border: 1px solid black;
+  margin-top: 50px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.feedback input,
+.feedback textarea,
+.feedback label {
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
